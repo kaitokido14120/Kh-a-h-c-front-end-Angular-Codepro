@@ -1,0 +1,16 @@
+<div class="container">
+  
+  <div [ngSwitch]="color">
+      <div *ngSwitchCase="'red'" style="color: red">cybersoft</div>
+      <div *ngSwitchCase="'green'" style="color: green">cybersoft</div>
+      <div *ngSwitchCase="'blue'" style="color: blue">cybersoft</div>
+     
+  </div>
+
+
+  <select #t (change)="ChangeColor(t.value)">
+      <option value="red" style="color: red" selected>Red</option>
+      <option value="green" style="color: green">Green</option>
+      <option value="blue" style="color: blue">Blue</option>
+  </select>
+</div>

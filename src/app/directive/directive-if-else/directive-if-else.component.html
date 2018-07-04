@@ -1,0 +1,20 @@
+<div *ngIf="status; else templateChuaDangNhap">
+    <button (click)="DangXuat()" >Đăng xuất</button>
+    <h5>Xin chào</h5> <b>cybersoft</b>
+</div>
+
+
+<ng-template #templateChuaDangNhap>
+    <div class="form-group">
+      <span>Email</span>
+      <input type="text" #Email  class="form-control" />
+    </div>
+    <div class="form-group">
+        <span>Password</span>
+        <input type="text" #Pass  class="form-control" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success" (click)="DangNhap(Email.value,Pass.value)">Đăng nhập</button>
+    </div>
+    <h5 class="text-danger">{{ThongBao}}</h5>
+</ng-template>

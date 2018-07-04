@@ -1,0 +1,19 @@
+<div class="container">
+  <h3 class="display-4">Register Form</h3>
+  <div class="form-group">
+      <span>Email</span>
+      <input #txtEmail [(ngModel)]="Email" type="email" class="form-control"  placeholder="Email" />
+  </div>
+  <div class="form-group">
+      <span>FullName</span>
+      <input #txtFullName type="text" class="form-control" placeholder="FullName" />
+  </div>
+  <div class="form-group">
+      <button (click)="ChangeFullName(txtFullName.value)" type="button" class="btn btn-success">Submit</button>
+  </div>
+</div>
+<div class="container">
+  <h3>Kết quả</h3>
+  <span>Email: {{Email}}</span> <br />
+  <span>FullName: {{FullName}}</span>
+</div>
